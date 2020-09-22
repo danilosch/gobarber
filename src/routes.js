@@ -20,6 +20,9 @@ routes.get('/debug-sentry', function mainHandler(req, res) {
   throw new Error('My first Sentry error!');
 });
 
+routes.get('/ping', function(req, res) {
+  return res.json('Pong');
+});
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 
